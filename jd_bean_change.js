@@ -89,7 +89,7 @@ if ($.isNode()) {
 async function showMsg() {
   if ($.errorMsg) return
   if ($.isNode()) {
-	if((`${DND}` === 'true')||($.message!=''))
+	if((`${DND}` === 'false')||($.message!=''))
 		await notify.sendNotify(`${$.name} - 账号${$.index} - ${$.nickName}`, `账号${$.index}：${$.nickName || $.UserName}\n${$.message}`, { url: `https://bean.m.jd.com/beanDetail/index.action?resourceValue=bean` })
 	else {console.log('您设置的是京豆变动通知免打扰，只在有过期京豆的时候进行通知！')}
  }
